@@ -1,18 +1,31 @@
 {
-  "name": "tamj-vless-relay",
-  "outputDirectory": "public",
   "rewrites": [
     {
-      "source": "/MTJ/:path*",
-      "destination": "http://159.223.93.146/MTJ/:path*"
+      "source": "/MTJ/*",
+      "destination": "http://159.223.93.146/MTJ/:splat"
     },
     {
-      "source": "/vless_juan/:path*",
-      "destination": "http://159.223.93.146/vless_juan/:path*"
+      "source": "/vless_juan/*",
+      "destination": "http://159.223.93.146/vless_juan/:splat"
     },
     {
-      "source": "/vmess_juan/:path*",
-      "destination": "http://159.223.93.146/vmess_juan/:path*"
+      "source": "/vmess_juan/*",
+      "destination": "http://159.223.93.146/vmess_juan/:splat"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        },
+        {
+          "key": "X-TAMJ-Relay",
+          "value": "EdgeOne-Pages"
+        }
+      ]
     }
   ]
 }
