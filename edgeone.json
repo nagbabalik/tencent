@@ -1,0 +1,18 @@
+{
+  "name": "tamj-vless-relay",
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/MTJ/:path*",
+      "destination": "http://159.223.93.146/MTJ/:path*"
+    },
+    {
+      "source": "/vless_juan/:path*",
+      "destination": "http://159.223.93.146/vless_juan/:path*"
+    },
+    {
+      "source": "/vmess_juan/:path*",
+      "destination": "http://159.223.93.146/vmess_juan/:path*"
+    }
+  ]
+}
