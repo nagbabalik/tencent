@@ -1,12 +1,24 @@
 {
   "rewrites": [
     {
+      "source": "/MTJ",
+      "destination": "http://159.223.93.146/MTJ"
+    },
+    {
       "source": "/MTJ/*",
       "destination": "http://159.223.93.146/MTJ/:splat"
     },
     {
+      "source": "/vless_juan",
+      "destination": "http://159.223.93.146/vless_juan"
+    },
+    {
       "source": "/vless_juan/*",
       "destination": "http://159.223.93.146/vless_juan/:splat"
+    },
+    {
+      "source": "/vmess_juan",
+      "destination": "http://159.223.93.146/vmess_juan"
     },
     {
       "source": "/vmess_juan/*",
@@ -19,7 +31,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-store, no-cache, must-revalidate"
+          "value": "no-store"
         },
         {
           "key": "X-TAMJ-Relay",
